@@ -50,7 +50,7 @@ object Test2 {
       r._1.toString, r._2.getValue("t1".getBytes, "p".getBytes)
       //Bytes.toString(r._2.getValue(Bytes.toBytes("t1"),Bytes.toBytes("p")))
     )).toDF("t1", "p")
-    //注册为零时表
+    //注册为临时表
     faceFeature.registerTempTable("face_feature")
 
     // 从DataFrame查询出结果
@@ -84,10 +84,6 @@ object Test2 {
     //      println("value:"+v)
     //      println("length:"+v.length)
     //    }
-
     sc.stop()
-
   }
-
-
 }
